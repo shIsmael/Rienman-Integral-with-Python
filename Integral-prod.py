@@ -8,7 +8,7 @@ plt.style.use('ggplot')
 #The interval of the integral, represented by: a = lower bound b = higher bound
 a = 0
 b = 10
-k = 5 # K is equal to the number of "slices" or divisions that we want or the number of rectangles behind the graph
+k = 10 # K is equal to the number of "slices" or divisions that we want or the number of rectangles behind the graph
 #Note: If you use a higher value in k the program possibly will be a bit slow to show the graph.
 #Declaring the funciton
 def f(x):
@@ -22,29 +22,29 @@ x = 0  #Variable to catch the value of width of rectangle
 
 for i in range(k):
     x = wid_rectangle  
-    z = np.exp((-1 * (1 / 10)) * s)
     s += x 
     y = f(s)
     area_total += (x * y) 
-print(area_total)
+print("The probability is: ", area_total)
+
+#This part is to plot the graph 
 
 n = np.linspace(0, 10, 5001)
 plt.plot(n, f(n), color='red')
 plt.xlabel("x")
 plt.ylabel("y")
 v = str(k)
-plt.title("Aproximacao por Retangulos: k="+v)
+plt.title("Rectangle Aproximation   Number of rectangles:"+v)
 
-h = comprimento/k
-shura = h
+h = total_width/k
+y = h #A temporary variable to catch h value 
 l = 0
 for i in range(1, k+1):
     c = 0 + l
     d = n[i]
     plt.plot([c, h], [f((h)), f((h))], color='blue')
-    #print(h)
     d = h
     l = h
-    h = h + shura
+    h = h + y
     plt.plot([d, d], [0, f(d)], color='blue')
 plt.show()
