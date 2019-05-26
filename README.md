@@ -10,8 +10,8 @@ the for loop in the graph calculation part.
 
 I'm using the following libraries:
 
-Matplotlib
-Numpy
+-Matplotlib
+-Numpy
 
 My future objective is to turn this program to be able to calculate the probability of any function and before it verify if the
 function really is a density probability function
