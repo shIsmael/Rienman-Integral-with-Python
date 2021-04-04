@@ -14,6 +14,6 @@ I'm using the following libraries:
 - Numpy
 
 My future objective is to turn this program to be able to calculate the probability of any function and before it verify if the
-function really is a density probability function
+function really is a  probability density function
 
 
